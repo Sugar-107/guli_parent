@@ -27,6 +27,7 @@ public class CodeGet {
         //gc.setOutputDir("E:\\work\\guli_parent0621\\service\\service_edu" + "/src/main/java");
 
         gc.setOutputDir(projectPath + "/src/main/java");
+        //作者
         gc.setAuthor("bilibili");
         gc.setOpen(false); //生成后是否打开资源管理器
         gc.setFileOverride(false); //重新生成时文件是否覆盖
@@ -53,6 +54,7 @@ public class CodeGet {
         // 4、包配置
         PackageConfig pc = new PackageConfig();
         pc.setModuleName("cmsservice"); //模块名
+        //包路径
         pc.setParent("com.bilibili");
         pc.setController("controller");
         pc.setEntity("entity");
@@ -63,6 +65,7 @@ public class CodeGet {
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
 
+        //要对xx表进行生成
         strategy.setInclude("crm_banner");
 
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
